@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback & support | Toy Haven</title>
+  <meta name="description" content="Send a message to Toy Haven and read answers about delivery, the cart and the collection page.">
+  <meta name="author" content="Toy Haven">
+  <meta name="theme-color" content="#243049">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="../css/feedback.css">
+</head>
+<body data-page="feedback">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <img class="logo-mark" src="../images/logo-mark.png" alt="" width="36" height="36">
+        <span>Toy Haven</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="products.html" data-nav="products">Shop</a></li>
+          <li><a href="wishlist.html" data-nav="wishlist">Collection</a></li>
+          <li><a href="cart.html" data-nav="cart">Cart <span class="badge" data-cart-count>0</span></a></li>
+          <li><a href="feedback.html" data-nav="feedback">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap page-hero">
+    <p class="eyebrow">Support</p>
+    <h1>Feedback & support</h1>
+    <p class="lede">Ask a question or tell us what the cabinet is missing. Messages are stored on this device for the demonstration.</p>
+    <div class="support-layout">
+      <section class="panel" style="background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:1.2rem">
+        <h2>Write to us</h2>
+        <div id="feedback-confirm" class="confirm-banner" hidden>Thank you — your message has been saved.</div>
+        <form id="feedback-form" novalidate>
+          <div class="field">
+            <label for="fb-name">Name</label>
+            <input id="fb-name" name="name" type="text" autocomplete="name" required>
+            <span class="field-error"></span>
+          </div>
+          <div class="field">
+            <label for="fb-email">Email</label>
+            <input id="fb-email" name="email" type="email" autocomplete="email" required>
+            <span class="field-error"></span>
+          </div>
+          <div class="field">
+            <label for="fb-message">Message</label>
+            <textarea id="fb-message" name="message" required></textarea>
+            <span class="field-error"></span>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+      </section>
+      <section>
+        <h2>Questions we hear most</h2>
+        <div class="accordion">
+          <div class="acc-item">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq1" id="faq1-btn">Is this a real shop?<span>+</span></button></h3>
+            <div class="acc-panel" id="faq1" role="region" aria-labelledby="faq1-btn"><div><p>No. Toy Haven is a front-end university project. Orders and feedback stay in your browser.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq2" id="faq2-btn">Why did my cart come back after a refresh?<span>+</span></button></h3>
+            <div class="acc-panel" id="faq2" role="region" aria-labelledby="faq2-btn"><div><p>The cart is written to localStorage. Clearing site data in the browser will empty it, as will the Clear cart button.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq3" id="faq3-btn">How does the collection page work?<span>+</span></button></h3>
+            <div class="acc-panel" id="faq3" role="region" aria-labelledby="faq3-btn"><div><p>Add a piece from the shop, then mark it Interested, Owned or Not interested. Filters at the top show one status at a time.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq4" id="faq4-btn">Can I install Toy Haven on my phone?<span>+</span></button></h3>
+            <div class="acc-panel" id="faq4" role="region" aria-labelledby="faq4-btn"><div><p>Yes. The site ships as a small PWA with a manifest and service worker, so supporting browsers can add it to the home screen.</p></div></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <section>
+        <h2>Toy Haven</h2>
+        <p>A small cabinet shop for figurines, wooden toys, board games and toy cars. Built for collectors, gift-givers and anyone who still likes objects with weight.</p>
+      </section>
+      <section>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="wishlist.html">Collection</a></li>
+          <li><a href="feedback.html">Feedback & support</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="wrap legal">
+      <p>Toy Haven · COMP40053 Assignment 3 · Frontend only · Cart and orders stay in localStorage.</p>
+    </div>
+  </footer>
+
+  <script src="../js/products-data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/feedback.js"></script>
+</body>
+</html>

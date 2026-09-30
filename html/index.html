@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toy Haven | Collectible figurines, toys, games & toy cars</title>
+  <meta name="description" content="Toy Haven is a boutique shop for collectible figurines, wooden toys, board games and toy cars.">
+  <meta name="author" content="Toy Haven">
+  <meta name="theme-color" content="#243049">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <img class="logo-mark" src="../images/logo-mark.png" alt="" width="36" height="36">
+        <span>Toy Haven</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="products.html" data-nav="products">Shop</a></li>
+          <li><a href="wishlist.html" data-nav="wishlist">Collection</a></li>
+          <li><a href="cart.html" data-nav="cart">Cart <span class="badge" data-cart-count>0</span></a></li>
+          <li><a href="feedback.html" data-nav="feedback">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Auto-rotating promotional banners -->
+    <section class="hero-slider" aria-roledescription="carousel" aria-label="Promotions">
+      <div class="slides">
+        <article class="slide is-active">
+          <img src="../images/fig1.jpg" alt="A shelf of collectible figurines">
+          <div class="slide-copy wrap">
+            <p class="eyebrow">Figurines</p>
+            <h1>Cabinet pieces with a pulse</h1>
+            <p>Limited knights, sprites and dragons painted for a shelf, not a skip.</p>
+            <a class="btn btn-primary" href="products.html?category=Figurines">Shop figurines</a>
+          </div>
+        </article>
+        <article class="slide">
+          <img src="../images/plush.jpg" alt="Wooden toys arranged on a play table">
+          <div class="slide-copy wrap">
+            <p class="eyebrow">Toys</p>
+            <h2>Fluffy, cuddly and gentle play</h2>
+            <p>Plush that still feel like objects, not screens.</p>
+            <a class="btn btn-primary" href="products.html?category=Toys">Shop toys</a>
+          </div>
+        </article>
+        <article class="slide">
+          <img src="../images/board1.jpg" alt="Friends playing a board game at a table">
+          <div class="slide-copy wrap">
+            <p class="eyebrow">Board games</p>
+            <h2>Evenings that actually take an evening</h2>
+            <p>Heists, reefs and volcanic kingdoms boxed and ready for the table.</p>
+            <a class="btn btn-primary" href="products.html?category=Board%20Games">Shop games</a>
+          </div>
+        </article>
+        <article class="slide">
+          <img src="../images/car1.jpg" alt="A classic car photographed in golden light">
+          <div class="slide-copy wrap">
+            <p class="eyebrow">toy cars</p>
+            <h2>Scale models with real weight</h2>
+            <p>Diecast cars, rc cars in chrome, rubber and metal.</p>
+            <a class="btn btn-primary" href="products.html?category=Diecast%20Cars">Shop toy cars</a>
+          </div>
+        </article>
+      </div>
+      <div class="dots" role="tablist" aria-label="Choose a banner">
+        <button class="dot is-active" type="button" aria-label="Show figurines banner" aria-selected="true"></button>
+        <button class="dot" type="button" aria-label="Show toys banner" aria-selected="false"></button>
+        <button class="dot" type="button" aria-label="Show board games banner" aria-selected="false"></button>
+        <button class="dot" type="button" aria-label="Show diecast banner" aria-selected="false"></button>
+      </div>
+      <div class="slider-nav">
+        <button type="button" data-prev aria-label="Previous banner">‹</button>
+        <button type="button" data-next aria-label="Next banner">›</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Departments</p>
+            <h2>Four corners of the shop</h2>
+          </div>
+        </div>
+        <div class="category-grid">
+          <a class="category-tile" href="products.html?category=Figurines" style="background-image:url('../images/action.JPG')"><span>Figurines</span></a>
+          <a class="category-tile" href="products.html?category=Toys" style="background-image:url('../images/toysBG.JPG')"><span>Toys</span></a>
+          <a class="category-tile" href="products.html?category=Board%20Games" style="background-image:url('../images/boardGM.JPG')"><span>Board games</span></a>
+          <a class="category-tile" href="products.html?category=Diecast%20Cars" style="background-image:url('../images/cars.jpg')"><span>Toy cars</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap reveal">
+        <div class="potd" data-potd>
+          <div class="loader" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Highlights</p>
+            <h2>Featured this week</h2>
+            <p class="lede">A short edit of pieces we would put in the window — pulled live from the catalogue JSON.</p>
+          </div>
+          <a class="btn btn-navy" href="products.html">Shop now</a>
+        </div>
+        <div class="product-grid" data-featured-grid></div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <section>
+        <h2>Toy Haven</h2>
+        <p>A small cabinet shop for figurines, wooden toys, board games and toy cars. Built for collectors, gift-givers and anyone who still likes objects with weight.</p>
+      </section>
+      <section>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="wishlist.html">Collection</a></li>
+          <li><a href="feedback.html">Feedback & support</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="wrap legal">
+      <p>Toy Haven · COMP40053 Assignment 3 · Frontend only · Cart and orders stay in localStorage.</p>
+    </div>
+  </footer>
+
+  <script src="../js/products-data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/home.js"></script>
+</body>
+</html>

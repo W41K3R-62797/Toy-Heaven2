@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Toy Haven</title>
+  <meta name="description" content="Enter delivery details and place a simulated Toy Haven order.">
+  <meta name="author" content="Toy Haven">
+  <meta name="theme-color" content="#243049">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body data-page="checkout">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <img class="logo-mark" src="../images/logo-mark.png" alt="" width="36" height="36">
+        <span>Toy Haven</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="products.html" data-nav="products">Shop</a></li>
+          <li><a href="wishlist.html" data-nav="wishlist">Collection</a></li>
+          <li><a href="cart.html" data-nav="cart">Cart <span class="badge" data-cart-count>0</span></a></li>
+          <li><a href="feedback.html" data-nav="feedback">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap page-hero">
+    <p class="eyebrow">Checkout</p>
+    <h1>Where should it go?</h1>
+    <p class="lede">This is a front-end simulation. We validate the form, save the order in localStorage, and never keep card numbers.</p>
+    <div class="checkout-layout">
+      <form id="checkout-form" class="panel" novalidate>
+        <h2>Delivery</h2>
+        <div class="field">
+          <label for="full-name">Full name</label>
+          <input id="full-name" name="fullName" type="text" autocomplete="name" required>
+          <span class="field-error"></span>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <span class="field-error"></span>
+        </div>
+        <div class="field">
+          <label for="address">Delivery address</label>
+          <textarea id="address" name="address" autocomplete="street-address" required></textarea>
+          <span class="field-error"></span>
+        </div>
+        <fieldset>
+          <legend>Payment method</legend>
+          <div class="pay-options">
+            <label><input type="radio" name="payment" value="Card"> Card</label>
+            <label><input type="radio" name="payment" value="Cash on Delivery"> Cash on Delivery</label>
+          </div>
+        </fieldset>
+        <div id="card-fields" class="card-fields" hidden>
+          <div class="field">
+            <label for="card-number">Card number</label>
+            <input id="card-number" name="cardNumber" inputmode="numeric" maxlength="19" autocomplete="off">
+            <span class="help">Simulation only — use 16 digits, nothing is stored.</span>
+            <span class="field-error"></span>
+          </div>
+          <div class="field">
+            <label for="expiry">Expiry (MM/YY)</label>
+            <input id="expiry" name="expiry" placeholder="12/28" autocomplete="off">
+            <span class="field-error"></span>
+          </div>
+          <div class="field">
+            <label for="cvv">CVV</label>
+            <input id="cvv" name="cvv" inputmode="numeric" maxlength="4" autocomplete="off">
+            <span class="field-error"></span>
+          </div>
+        </div>
+        <input type="hidden" id="final-total" name="total" value="">
+        <button class="btn btn-primary" type="submit">Place order</button>
+      </form>
+      <aside class="panel">
+        <h2>Order summary</h2>
+        <div data-summary-body></div>
+      </aside>
+    </div>
+  </main>
+  <div id="success-overlay" class="success-overlay" hidden>
+    <div class="success-card" role="status">
+      <div class="check" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"></path></svg>
+      </div>
+      <h2>Order placed</h2>
+      <p>Reference <strong id="success-id"></strong></p>
+      <p>Total <strong id="success-total"></strong></p>
+      <p>The cart is cleared. The order is saved in this browser for your demo.</p>
+      <a class="btn btn-primary" href="index.html">Back to the shop</a>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <section>
+        <h2>Toy Haven</h2>
+        <p>A small cabinet shop for figurines, wooden toys, board games and toy cars. Built for collectors, gift-givers and anyone who still likes objects with weight.</p>
+      </section>
+      <section>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="wishlist.html">Collection</a></li>
+          <li><a href="feedback.html">Feedback & support</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="wrap legal">
+      <p>Toy Haven · COMP40053 Assignment 3 · Frontend only · Cart and orders stay in localStorage.</p>
+    </div>
+  </footer>
+
+  <script src="../js/products-data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/checkout.js"></script>
+</body>
+</html>

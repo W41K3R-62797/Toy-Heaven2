@@ -1,0 +1,100 @@
+/* Product listing — filters, search, grid, modal extras */
+
+.toolbar {
+  display: grid;
+  gap: 0.8rem;
+  margin-bottom: 1.4rem;
+}
+
+.search {
+  position: relative;
+}
+
+.search input {
+  width: 100%;
+  min-height: 48px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 0.6rem 1rem 0.6rem 2.6rem;
+  background: var(--paper);
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.95rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.filters button {
+  min-height: 40px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--paper);
+  color: var(--navy);
+  padding: 0.4rem 0.9rem;
+  font-weight: 600;
+}
+
+.filters button[aria-pressed="true"] {
+  background: var(--navy);
+  color: var(--paper);
+  border-color: var(--navy);
+}
+
+.result-count {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.product-card {
+  cursor: pointer;
+}
+
+.modal-card {
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--navy);
+  box-shadow: var(--shadow);
+}
+
+.modal-body .card-actions {
+  margin-top: 1rem;
+}
+
+.modal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.4rem 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .toolbar {
+    grid-template-columns: 1.3fr 2fr;
+    align-items: center;
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop | Toy Haven</title>
+  <meta name="description" content="Browse collectible figurines, toys, board games and toy cars. Filter by category or search by name.">
+  <meta name="author" content="Toy Haven">
+  <meta name="theme-color" content="#243049">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="../css/products.css">
+</head>
+<body data-page="products">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <img class="logo-mark" src="../images/logo-mark.png" alt="" width="36" height="36">
+        <span>Toy Haven</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="products.html" data-nav="products">Shop</a></li>
+          <li><a href="wishlist.html" data-nav="wishlist">Collection</a></li>
+          <li><a href="cart.html" data-nav="cart">Cart <span class="badge" data-cart-count>0</span></a></li>
+          <li><a href="feedback.html" data-nav="feedback">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap page-hero">
+    <p class="eyebrow">The shop</p>
+    <h1>All sixteen pieces</h1>
+    <p class="lede">Filter by department or search by name. Open a card for the full story, then add it to your cart or collection.</p>
+
+    <div class="toolbar">
+      <div class="search">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M20 20l-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2"></path></svg>
+        <label class="sr-only" for="product-search">Search products by name</label>
+        <input id="product-search" type="search" placeholder="Search by name" autocomplete="off">
+      </div>
+      <div class="filters" role="group" aria-label="Filter by category">
+        <button type="button" data-filter="All" aria-pressed="true">All</button>
+        <button type="button" data-filter="Figurines" aria-pressed="false">Figurines</button>
+        <button type="button" data-filter="Toys" aria-pressed="false">Toys</button>
+        <button type="button" data-filter="Board Games" aria-pressed="false">Board games</button>
+        <button type="button" data-filter="Toy Cars" aria-pressed="false">Toy cars</button>
+      </div>
+    </div>
+    <p class="result-count" data-result-count>Loading catalogue…</p>
+    <div class="product-grid" data-product-grid></div>
+    <noscript><p>Please enable JavaScript to browse the catalogue.</p></noscript>
+  </main>
+
+  <div id="product-modal" class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <img id="modal-image" src="../images/aether-knight.jpg" alt="">
+      <div class="modal-body">
+        <button type="button" class="btn btn-ghost btn-icon modal-close" id="modal-close" aria-label="Close details">×</button>
+        <p class="eyebrow" id="modal-category">Category</p>
+        <h2 id="modal-title">Name</h2>
+        <p class="price" id="modal-price"></p>
+        <p id="modal-desc"></p>
+        <p class="muted" id="modal-details"></p>
+        <div class="card-actions">
+          <button type="button" class="btn btn-primary" id="modal-add">Add to cart</button>
+          <button type="button" class="btn btn-ghost" id="modal-wish">Add to wishlist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <section>
+        <h2>Toy Haven</h2>
+        <p>A small cabinet shop for figurines, wooden toys, board games and toy cars. Built for collectors, gift-givers and anyone who still likes objects with weight.</p>
+      </section>
+      <section>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="wishlist.html">Collection</a></li>
+          <li><a href="feedback.html">Feedback & support</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="wrap legal">
+      <p>Toy Haven · COMP40053 Assignment 3 · Frontend only · Cart and orders stay in localStorage.</p>
+    </div>
+  </footer>
+
+  <script src="../js/products-data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/products.js"></script>
+</body>
+</html>
