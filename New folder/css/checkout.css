@@ -1,0 +1,109 @@
+/* Checkout form + order summary + success overlay */
+
+.checkout-layout {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.panel {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.pay-options {
+  display: grid;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.pay-options label {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  min-height: 48px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+
+.pay-options input {
+  accent-color: var(--terracotta);
+}
+
+.card-fields[hidden] {
+  display: none;
+}
+
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  background: rgba(28, 25, 21, 0.6);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.success-overlay[hidden] {
+  display: none;
+}
+
+.success-card {
+  background: var(--paper);
+  text-align: center;
+  padding: 2rem 1.4rem;
+  border-radius: 24px;
+  width: min(100%, 420px);
+}
+
+.check {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--success);
+  display: grid;
+  place-items: center;
+  animation: pop 500ms var(--ease);
+}
+
+.check svg {
+  width: 36px;
+  height: 36px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: draw 0.6s 0.2s var(--ease) forwards;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .checkout-layout {
+    grid-template-columns: 1.3fr 0.9fr;
+    align-items: start;
+  }
+}
